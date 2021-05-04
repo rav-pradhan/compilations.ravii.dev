@@ -2,8 +2,10 @@ GEM
   remote: https://rubygems.org/
   specs:
     diff-lcs (1.4.4)
+    ffi (1.15.0)
     mustermann (1.1.1)
       ruby2_keywords (~> 0.0.1)
+    prettier (1.5.5)
     rack (2.2.3)
     rack-protection (2.1.0)
       rack
@@ -22,6 +24,8 @@ GEM
       rspec-support (~> 3.10.0)
     rspec-support (3.10.2)
     ruby2_keywords (0.0.4)
+    sassc (2.4.0)
+      ffi (~> 1.9)
     sinatra (2.1.0)
       mustermann (~> 1.0)
       rack (~> 2.2)
@@ -34,8 +38,10 @@ PLATFORMS
   x86_64-linux
 
 DEPENDENCIES
+  prettier
   rake
   rspec
+  sassc
   sinatra
 
 BUNDLED WITH
