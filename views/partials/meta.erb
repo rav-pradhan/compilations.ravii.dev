@@ -1,0 +1,11 @@
+<title><%= @page_heading %></title>
+<link rel="canonical" href="<%= request.url %>"/>
+<meta property="og:site_name" content="Compilations - Ravi Pradhan"/>
+<meta property="og:title" content="Compilations - Ravi Pradhan"/>
+<meta property="og:type" content="website"/>
+<meta property="og:url" content="<%= request.url %>"/>
+<% if @page_heading %>
+  <meta name="description" content="<%= @page_heading %>"/>
+  <meta property="og:description" content="<%= @page_heading %>"/>
+<% end %>
+<link rel="icon" href="/images/meta/favicon.ico" type="image/x-icon" />

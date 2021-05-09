@@ -1,0 +1,47 @@
+
+// variables
+@import "variables/colours";
+@import "variables/spacing";
+@import "variables/typographyScale";
+@import "typography";
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir, helvetica neue, helvetica, Ubuntu, roboto, noto,
+        segoe ui, arial, sans-serif;
+    font-size: $size-500;
+    color: $dark-grey;
+    background: $off-white;
+    min-height: 100vh;
+    padding-bottom: 3rem;
+    line-height: 1.5;
+    text-rendering: optimizeSpeed;
+}
+
+hr {
+    border: 1px dashed $accent;
+    margin: $s2 0;
+}
+
+footer {
+    text-align: center;
+}
+
+.wrapper {
+    max-width: 60rem;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+    margin: 3rem auto;
+}
+
+// primitives
+@import "primitives/stack";
+@import "primitives/sidebar";
+@import "primitives/grid";
+
+// components
+@import "components/site-header";
+@import "components/item";
+@import "components/recent-media";
+
+// utilities
+@import "utilities/skipLink";

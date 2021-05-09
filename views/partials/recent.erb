@@ -1,0 +1,14 @@
+<h2>Recent Additions</h2>
+<ul class="recent-media grid">
+  <% @media.first(3).each do |item| %>
+    <li>
+      <a href="/<%= item[:type] %>/<%= item[:id] %>">
+        <img style="width:232px;" src="<%= item[:image_url] %>" alt="<%= item[:title] %>">
+        <div>
+          <h3><%= item[:title] %></h3>
+          <p><%= item[:credit] %></p>
+        </div>
+      </a>
+    </li>
+   <% end %>
+</ul>

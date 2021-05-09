@@ -1,7 +1,10 @@
 source 'https://rubygems.org'
 
 gem 'prettier'
-gem 'sassc'
 gem 'sinatra'
+gem 'sprockets'
+gem 'sassc'
+gem 'sass'
 gem 'rake'
 gem 'rspec'
+gem 'uglifier'
