@@ -1,6 +1,9 @@
 format:
 	bundle exec rbprettier --write '**/*.rb' '**/*.ru'
 
+test:
+	bundle exec rspec --format documentation
+
 run-dev:
 	rackup
 
