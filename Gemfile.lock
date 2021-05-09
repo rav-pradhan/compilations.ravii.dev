@@ -1,10 +1,7 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    concurrent-ruby (1.1.8)
     diff-lcs (1.4.4)
-    execjs (2.7.0)
-    ffi (1.15.0)
     mustermann (1.1.1)
       ruby2_keywords (~> 0.0.1)
     prettier (1.5.5)
@@ -12,9 +9,6 @@ GEM
     rack-protection (2.1.0)
       rack
     rake (13.0.3)
-    rb-fsevent (0.10.4)
-    rb-inotify (0.10.1)
-      ffi (~> 1.0)
     rspec (3.10.0)
       rspec-core (~> 3.10.0)
       rspec-expectations (~> 3.10.0)
@@ -29,24 +23,12 @@ GEM
       rspec-support (~> 3.10.0)
     rspec-support (3.10.2)
     ruby2_keywords (0.0.4)
-    sass (3.7.4)
-      sass-listen (~> 4.0.0)
-    sass-listen (4.0.0)
-      rb-fsevent (~> 0.9, >= 0.9.4)
-      rb-inotify (~> 0.9, >= 0.9.7)
-    sassc (2.4.0)
-      ffi (~> 1.9)
     sinatra (2.1.0)
       mustermann (~> 1.0)
       rack (~> 2.2)
       rack-protection (= 2.1.0)
       tilt (~> 2.0)
-    sprockets (4.0.2)
-      concurrent-ruby (~> 1.0)
-      rack (> 1, < 3)
     tilt (2.0.10)
-    uglifier (4.2.0)
-      execjs (>= 0.3.0, < 3)
 
 PLATFORMS
   x86_64-darwin-20
@@ -56,11 +38,7 @@ DEPENDENCIES
   prettier
   rake
   rspec
-  sass
-  sassc
   sinatra
-  sprockets
-  uglifier
 
 BUNDLED WITH
    2.2.16
