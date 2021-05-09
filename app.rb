@@ -1,8 +1,4 @@
 require 'sinatra/base'
-require 'sprockets'
-require 'uglifier'
-require 'sassc'
-require 'sass'
 
 class App < Sinatra::Base
   get '/' do
