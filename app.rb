@@ -37,7 +37,12 @@ class App < Sinatra::Base
   end
 
   not_found do
-    status 404
-    erb :page_not_found, layout: :'layouts/main'
+    @content = "It looks like this page doesn't exist! If clicking on a link brought you here, then whoops. I should probably check that out."
+    erb :page_not_loaded, layout: :'layouts/main'
+  end
+
+  error do
+    @content = "Sorry, something untoward happened when trying to load the page. Try refreshing the page."
+    erb :page_not_loaded, layout: :'layouts/main' 
   end
 end
