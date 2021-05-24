@@ -1,0 +1,25 @@
+<div class="stack">
+  <div class="sidebar">
+    <div>
+      <div class="item__image">
+        <img src="<%= @book[:image_url] %>" alt="<%= @book[:title] %>">
+      </div>
+      <div class="item__details stack">
+        <h1><%= @book[:title] %></h1>
+        <h2><%= @book[:credits] %></h2>
+        <dl>
+          <dt>Pages</dt>
+          <dd><%= @book[:page_count] %></dd>
+          <dt>Publisher</dt>
+          <dd><%= @book[:publisher] %></dd>
+        </dl>
+      </div>
+    </div>
+  </div>
+  <summary class="stack">
+    <h2>Synopsis</h2>
+    <p><%= @book[:synopsis] %></p>
+    <h2>Impressions</h2>
+    <p><%= @book[:impressions] %></p>
+  </summary>
+</div>

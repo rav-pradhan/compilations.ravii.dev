@@ -2,8 +2,10 @@ GEM
   remote: https://rubygems.org/
   specs:
     diff-lcs (1.4.4)
+    dotenv (2.7.6)
     mustermann (1.1.1)
       ruby2_keywords (~> 0.0.1)
+    pg (1.2.3)
     prettier (1.5.5)
     rack (2.2.3)
     rack-protection (2.1.0)
@@ -23,6 +25,7 @@ GEM
       rspec-support (~> 3.10.0)
     rspec-support (3.10.2)
     ruby2_keywords (0.0.4)
+    sequel (5.44.0)
     sinatra (2.1.0)
       mustermann (~> 1.0)
       rack (~> 2.2)
@@ -35,9 +38,12 @@ PLATFORMS
   x86_64-linux
 
 DEPENDENCIES
+  dotenv
+  pg
   prettier
   rake
   rspec
+  sequel
   sinatra
 
 BUNDLED WITH

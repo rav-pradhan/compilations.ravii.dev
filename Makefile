@@ -7,6 +7,9 @@ test:
 run-dev:
 	rackup
 
+generate-data:
+	irb -r ./lib/generate_data.rb
+
 sass-watch:
 	sass --sourcemap=none --style compressed --watch assets/stylesheets/main.scss:public/stylesheets/main.css
 
