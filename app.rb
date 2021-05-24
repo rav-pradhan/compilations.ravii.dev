@@ -12,6 +12,10 @@ class App < Sinatra::Base
     @database = Sequel.connect("#{ENV['DATABASE_URL']}")
   end
 
+  after do
+    @database.disconnect
+  end
+
   get '/' do
     @page_heading = 'Compilations'
     @media = []
