@@ -9,9 +9,7 @@ require_relative 'lib/use_cases/fetch_book'
 
 class App < Sinatra::Base
   before do
-    @database = Sequel.connect(
-      "postgres://#{ENV['USERNAME']}:#{ENV['PASSWORD']}@#{ENV['HOST']}:#{ENV['PORT']}/#{ENV['DB']}"
-    )
+    @database = Sequel.connect("#{ENV['DATABASE_URL']}")
   end
 
   get '/' do
