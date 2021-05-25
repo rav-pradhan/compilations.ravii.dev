@@ -1,7 +1,7 @@
 <div class="stack">
   <div class="sidebar">
     <div>
-      <div class="item__image">
+      <div class="item__image item__image--book">
         <img src="<%= @book[:image_url] %>" alt="<%= @book[:title] %>">
       </div>
       <div class="item__details stack">
@@ -12,6 +12,8 @@
           <dd><%= @book[:page_count] %></dd>
           <dt>Publisher</dt>
           <dd><%= @book[:publisher] %></dd>
+          <dt>Date added</dt>
+          <dd><%= @book[:added] %></dd>
         </dl>
       </div>
     </div>

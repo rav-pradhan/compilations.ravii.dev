@@ -9,7 +9,9 @@ require_relative 'lib/use_cases/fetch_book'
 
 class App < Sinatra::Base
   before do
+    cache_control :public, :max_age => 31536000
     @database = Sequel.connect("#{ENV['DATABASE_URL']}")
+    @database.extension :pg_array
   end
 
   after do
@@ -17,7 +19,7 @@ class App < Sinatra::Base
   end
 
   get '/' do
-    @page_heading = 'Compilations'
+    @page_heading = 'Welcome'
     @media = []
     erb :home, layout: :'layouts/main'
   end
@@ -42,6 +44,7 @@ class App < Sinatra::Base
   end
 
   error do
+    @page_heading = "Error"
     @content = "Sorry, something untoward happened when trying to load the page. Try refreshing the page."
     erb :page_not_loaded, layout: :'layouts/main' 
   end
