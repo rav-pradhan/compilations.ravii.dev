@@ -7,8 +7,7 @@ class FetchBook
       @validation_errors = []
       convert_to_integer(id)
       validate(id)
-      return @books_gateway.fetch_book(id) if @validation_errors.empty?
-      @validation_errors
+      @validation_errors.empty? ? @books_gateway.fetch_book(id) : @validation_errors
     end
 
     private

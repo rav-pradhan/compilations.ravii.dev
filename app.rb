@@ -20,7 +20,6 @@ class App < Sinatra::Base
 
   get '/' do
     @page_heading = 'Welcome'
-    @media = []
     erb :home, layout: :'layouts/main'
   end
 
@@ -28,6 +27,17 @@ class App < Sinatra::Base
     gateway = BooksGatewaySequel.new(@database)
     @books = FetchBooks.new(gateway).invoke
     @page_heading = 'All Books'
+
+    @breadcrumbs = [
+      {
+        name: "Home",
+        link: "/"
+      },
+      {
+        name: "Books",
+        link: "/books"
+      },
+    ]
     erb :books, layout: :'layouts/media'
   end
 
@@ -35,6 +45,20 @@ class App < Sinatra::Base
     gateway = BooksGatewaySequel.new(@database)
     @book = FetchBook.new(gateway).invoke(params[:id])
     @page_heading = @book[:title]
+    @breadcrumbs = [
+      {
+        name: "Home",
+        link: "/"
+      },
+      {
+        name: "Books",
+        link: "/books"
+      },
+      {
+        name: "#{@book[:title]}",
+        link: "/books/" + params[:id] 
+      }
+    ]
     erb :book, layout: :'layouts/main'
   end
 

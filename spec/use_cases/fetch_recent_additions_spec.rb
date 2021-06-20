@@ -2,12 +2,12 @@ require 'spec_helper'
 
 describe 'ViewRecentAdditions' do
   describe '#invoke' do
-    context 'given that the use case is instantiated with a datastore' do
+    context 'a visitor reaches the homepage' do
       let(:mock_compilations_gateway) { MockDatastore.new }
       let(:fetch_additions) do
         ViewRecentAdditions.new(mock_compilations_gateway)
       end
-      it 'makes a call to the datastore\'s fetch_recent_additions' do
+      it 'displays the most recent additions to the compilations' do
         fetch_additions.invoke
         expect(
           mock_compilations_gateway.fetch_recent_additions_was_called?

@@ -1,0 +1,22 @@
+.breadcrumbs {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+
+    li {
+        display: inline;
+        a {
+            color: $accent;
+
+            &:hover {
+                color: $dark-grey;
+            }
+        }
+        
+        &:not(:first-child) {
+            &:before {
+                content: " / ";
+            }
+        }
+    }
+}

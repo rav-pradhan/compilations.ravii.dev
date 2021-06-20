@@ -1,15 +1,17 @@
-<h2>Books</h2>
-<p><a href="/">&#8592; Home</a></p>
+<section class="stack">
+<h1>Books</h1>
+<%= erb :'partials/breadcrumbs' %>
 <ul class="recent-media grid">
   <% @books.each do |item| %>
     <li>
       <a href="/books/<%= item[:id] %>">
         <img class="item__image--book" src="<%= item[:image_url] %>" alt="<%= item[:title] %>">
         <div>
-          <h3><%= item[:title] %></h3>
+          <h2 class="item__heading"><%= item[:title] %></h2>
           <p><%= item[:credits] %></p>
         </div>
       </a>
     </li>
    <% end %>
 </ul>
+</section>

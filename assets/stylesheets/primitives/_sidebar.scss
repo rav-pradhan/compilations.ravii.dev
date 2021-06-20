@@ -1,14 +1,11 @@
 .sidebar {
-    overflow: hidden;
-
     > * {
         display: flex;
         flex-wrap: wrap;
-        margin: ($s1 / 2) * -1;
+        gap: $s3;
     }
 
-    > * > * {
-        margin: $s1 / 2;
+    > :first-child {
         flex-grow: 1;
     }
 
