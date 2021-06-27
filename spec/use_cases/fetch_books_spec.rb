@@ -1,4 +1,5 @@
 require 'spec_helper'
+require 'gateway/mock_books_gateway'
 
 describe 'FetchBooks' do
   describe '#invoke' do
@@ -10,17 +11,5 @@ describe 'FetchBooks' do
         expect(mock_books_gateway.fetch_all_was_called?).to be_truthy
       end
     end
-  end
-end
-
-class MockBooksGateway
-  @fetch__all_was_called = false
-
-  def fetch_all
-    @fetch_called = true
-  end
-
-  def fetch_all_was_called?
-    @fetch_called
   end
 end

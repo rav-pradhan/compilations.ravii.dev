@@ -9,6 +9,6 @@ class BooksGatewaySequel
   end
 
   def fetch_book(book_id)
-    @books.first(:id => book_id)
+    @books.first(id: book_id)
   end
 end

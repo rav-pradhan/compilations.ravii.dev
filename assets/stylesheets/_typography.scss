@@ -28,7 +28,7 @@ h4 {
 p {
 	margin: 1.2rem 0;
 	max-width: 55ch;
-	word-break: break-word;
+	overflow-wrap: anywhere;
 	a {
 		color: $accent;
 		text-decoration: underline;
@@ -93,7 +93,7 @@ pre {
 
 code[class*="language-"], pre[class*="language-"] {
 	white-space:pre-wrap !important;
-	word-break: break-word;
+	overflow-wrap: anywhere;
 }
 
 blockquote {
